@@ -1,11 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Green Earth</title>
+<link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    
+
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="logo">Green Earth</div>
+  <ul class="menu">
+    <li><a href="#about">About</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#plant">Plant a Tree</a></li>
+  </ul>
+  <button class="btn btn-plant-tree">Plant a Tree</button>
+</nav>
+
+<!-- Banner Section -->
+<section class="banner">
+  <img src="images/leaf-left.png" alt="" aria-hidden="true" class="leaf left" />
+  <img src="images/leaf-right.png" alt="" aria-hidden="true" class="leaf right" />
+  <div class="banner-content">
+    <h1>Plant a Tree, Grow a Future</h1>
+    <p>Join our mission to plant 1 million trees and make the Earth greener for future generations.</p>
+    <button class="btn btn-banner">Get Involved</button>
+  </div>
+</section>
+
+<main class="main-content">
+
+<!-- Choose Your Trees Section -->
+<section class="choose-section" id="gallery" aria-label="Choose your trees">
+
+  <h2 class="section-title">Choose Your Trees</h2>
+
+  <div class="choose-wrapper">
+
+    <!-- Categories Sidebar -->
+    <nav class="categories" aria-label="Tree Categories">
+      <button class="category-btn active" data-category="All Trees">All Trees</button>
+      <button class="category-btn" data-category="Fruit Trees">Fruit Trees</button>
+      <button class="category-btn" data-category="Flowering Trees">Flowering Trees</button>
+      <button class="category-btn" data-category="Shade Trees">Shade Trees</button>
+      <button class="category-btn" data-category="Medicinal Trees">Medicinal Trees</button>
+      <button class="category-btn" data-category="Timber Trees">Timber Trees</button>
+      <button class="category-btn" data-category="Evergreen Trees">Evergreen Trees</button>
+      <button class="category-btn" data-category="Ornamental Plants">Ornamental Plants</button>
+      <button class="category-btn" data-category="Bamboo">Bamboo</button>
+      <button class="category-btn" data-category="Climbers">Climbers</button>
+      <button class="category-btn" data-category="Aquatic Plants">Aquatic Plants</button>
+    </nav>
+
+    <!-- Trees Grid -->
+    <section class="trees-grid" aria-live="polite" role="region">
+      <!-- Tree cards added via JS -->
+    </section>
+
+    <!-- Cart -->
+    <aside class="cart" aria-label="Your Cart">
+      <h3>Your Cart</h3>
+      <ul id="cart-list" aria-live="polite" class="cart-list"></ul>
+      <div class="cart-total">Total: ৳<span id="cart-total">0</span></div>
+    </aside>
+
+  </div>
+</section>
+
+<!-- About Campaign -->
+<section class="about-campaign" id="about" aria-labelledby="about-title">
+  <h2 id="about-title" class="section-title">About the Campaign</h2>
+  <div class="about-content">
+    <img src="images/about-plant.jpg" alt="Potted plant with green leaves" class="about-image" />
+    <div class="about-text">
+      <p>Green Earth is a global tree plantation initiative dedicated to fighting climate change. Since our start, we've planted over 500,000 trees worldwide. By joining our campaign, you help restore forests, create habitats for wildlife, and combat global warming.</p>
+      <ul>
+        <li>Restoration of natural habitats</li>
+        <li>Improvement of air quality</li>
+        <li>Support for local communities</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Impact Section -->
+<section class="impact-section" aria-labelledby="impact-title">
+  <h2 id="impact-title" class="section-title">Our Impact</h2>
+  <div class="impact-cards">
+    <div class="impact-card">
+      <div class="impact-number">500K+</div>
+      <div class="impact-text">Trees Planted</div>
+    </div>
+    <div class="impact-card">
+      <div class="impact-number">120+</div>
+      <div class="impact-text">Communities Involved</div>
+    </div>
+    <div class="impact-card">
+      <div class="impact-number">30+</div>
+      <div class="impact-text">Countries Reached</div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- Plant a Tree Today Section -->
+<section class="plant-section" id="plant" aria-labelledby="plant-title">
+  <h2 id="plant-title" class="section-title">Plant a Tree Today</h2>
+  <form id="plant-tree-form" autocomplete="off" aria-label="Plant a tree form">
+    <input type="text" id="name" name="name" placeholder="Your Name" required />
+    <input type="email" id="email" name="email" placeholder="Your Email Address" required />
+    <select id="num-trees" name="num-trees" required>
+      <option value="" disabled selected>Number of Trees</option>
+      <option value="1">1 Tree</option>
+      <option value="5">5 Trees</option>
+      <option value="10">10 Trees</option>
+      <option value="20">20 Trees</option>
+      <option value="50">50 Trees</option>
+    </select>
+    <button type="submit" class="btn btn-donate">Donate Now</button>
+  </form>
+  <footer class="footer-text">© 2025 Green Earth. All Rights Reserved.</footer>
+</section>
+
+<!-- Modal for tree full details -->
+<div id="modal-overlay" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-description">
+  <div class="modal">
+    <button id="modal-close" class="modal-close-btn" aria-label="Close modal">&times;</button>
+    <img id="modal-image" src="" alt="" />
+    <h3 id="modal-title"></h3>
+    <p id="modal-description"></p>
+    <p><strong>Category:</strong> <span id="modal-category"></span></p>
+    <p><strong>Price:</strong> ৳<span id="modal-price"></span></p>
+  </div>
+</div>
+
+<script src="script.js"></script>
+
 </body>
 </html>

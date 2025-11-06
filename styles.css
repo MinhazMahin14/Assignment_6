@@ -1,0 +1,99 @@
+/* Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #d9f1e0;
+  color: #1a3d1a;
+  line-height: 1.5;
+  font-size: 18px;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #196622;
+  padding: 1.2rem 4rem;
+  color: white;
+  font-weight: 600;
+  font-size: 1.15rem;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 3rem;
+}
+
+.menu li a {
+  color: white;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.menu li a:hover {
+  text-decoration: underline;
+}
+
+.btn-plant-tree {
+  background-color: #f4bf19;
+  border: none;
+  color: #196622;
+  font-weight: 700;
+  border-radius: 28px;
+  padding: 12px 26px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-plant-tree:hover {
+  background-color: #d8a814;
+}
+
+/* Banner */
+.banner {
+  background-color: #c7e4cd;
+  height: 280px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 2rem;
+  overflow: hidden;
+}
+
+.leaf {
+  position: absolute;
+  height: 220px;
+  top: 20px;
+  user-select: none;
+}
+
+.leaf.left {
+  left: 40px;
+}
+
+.leaf.right {
+  right: 40px;
+  transform: scaleX(-1);
+}
+
+.banner-content {
+  max-width: 800px;
+}
