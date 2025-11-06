@@ -354,6 +354,7 @@ body {
   height: auto;
   object-fit: cover;
   flex-shrink: 0;
+  display: grid;
 }
 
 .about-text {
@@ -529,6 +530,86 @@ body {
   line-height: 1;
 }
 
+/* ============================== */
+.about-campaign {
+  background-color: #c7e7c1; /* pastel green from your screenshot */
+  margin: 40px 20px;
+  padding: 20px 24px;
+  border-radius: 20px;
+}
+
+.about-container {
+  display: flex;
+  max-width: 1100px;
+  margin: 0 auto;
+  gap: 60px;
+  align-items: center;
+}
+
+.about-heading {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  font-weight: 700;
+  font-size: 30px;
+  color: #195b24;
+  user-select: none;
+  line-height: 1;
+  min-width: 64px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  max-width: 700px;
+}
+
+.about-image {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 24px;
+  object-fit: cover;
+  margin-bottom: 24px;
+}
+
+.about-text {
+  font-weight: 500;
+  color: #195b24;
+  font-size: 1.05rem;
+  line-height: 1.45;
+}
+
+.about-text ul {
+  margin-top: 20px;
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+.about-text ul li {
+  margin-bottom: 12px;
+}
+
+/* Responsive adjustments */
+/* @media (max-width: 940px) {
+  .about-container {
+    flex-direction: column;
+    gap: 36px;
+  }
+  .about-heading {
+    writing-mode: horizontal-tb;
+    text-align: left;
+    min-width: auto;
+    font-size: 26px;
+    line-height: 1.25;
+  }
+  .about-image {
+    max-width: 100%;
+    margin-bottom: 18px;
+  }
+} */
+
+
 /* Responsive */
 @media (max-width: 992px) {
   .choose-wrapper {
@@ -605,5 +686,25 @@ body {
 
   .menu {
     gap: 1.3rem;
+  }
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 940px) {
+  .about-container {
+    flex-direction: column;
+    gap: 36px;
+  }
+  .about-heading {
+    writing-mode: horizontal-tb;
+    text-align: left;
+    min-width: auto;
+    font-size: 26px;
+    line-height: 1.25;
+  }
+  .about-image {
+    max-width: 100%;
+    margin-bottom: 18px;
   }
 }
