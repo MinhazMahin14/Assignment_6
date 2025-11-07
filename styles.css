@@ -657,10 +657,6 @@ body {
     order: 2;
   }
 
-  .banner img {
-    display: none;
-  }
-
   .navbar .menu {
     flex-direction: column;
     gap: 10px;
