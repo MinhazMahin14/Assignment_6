@@ -444,6 +444,10 @@ body {
 /* Plant a Tree Section */
 .plant-section {
   background-color: #196622;
+  border-radius: 50px;
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 20px;
   padding: 4rem 0 4.8rem;
   color: #f4bf19;
   user-select: none;
