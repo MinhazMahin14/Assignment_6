@@ -340,7 +340,7 @@ body {
 
 /* About Campaign */
 .about-campaign {
-  background-color: #c7e7c1; /* pastel green from your screenshot */
+  background-color: #c7e7c1;
   margin: 40px 20px;
   padding: 20px 24px;
   border-radius: 20px;
@@ -382,7 +382,6 @@ body {
   object-fit: cover;
   margin-bottom: 24px;
 }
-
 
 .about-text {
   font-weight: 500;
@@ -455,6 +454,7 @@ body {
   font-weight: 700;
   font-size: 1.85rem;
   margin-bottom: 3rem;
+  color: white;
 }
 
 #plant-tree-form {
@@ -477,7 +477,9 @@ body {
 
 #plant-tree-form select {
   appearance: none;
-  background: white url("data:image/svg+xml;charset=UTF-8,%3Csvg width='14' height='8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l6 6 6-6' stroke='%231a3d1a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat right 1.5rem center / 1rem auto;
+  background: white
+    url("data:image/svg+xml;charset=UTF-8,%3Csvg width='14' height='8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l6 6 6-6' stroke='%231a3d1a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")
+    no-repeat right 1.5rem center / 1rem auto;
   background-origin: content-box;
   background-position-x: calc(100% - 18px);
 }
@@ -617,9 +619,16 @@ body {
   }
 }
 
-@media (max-width: 580px) {
+@media (max-width: 576px) {
   .banner-content h1 {
     font-size: 1.65rem;
+  }
+  .banner img {
+    display: none;
+  }
+  .about-content {
+    display: flex;
+    flex-direction: column;
   }
 
   .banner-content p {
@@ -634,4 +643,32 @@ body {
   .menu {
     gap: 1.3rem;
   }
+
+  .about-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about-image {
+    order: 1;
+  }
+
+  .about-text {
+    order: 2;
+  }
+
+  .banner img {
+    display: none;
+  }
+
+  .navbar .menu {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .btn {
+    padding: 10px 16px;
+    font-size: 1rem;
+  }
+
 }

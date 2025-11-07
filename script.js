@@ -2,7 +2,6 @@ const treesData = [
   {
     id: 1,
     name: "Mango Tree",
-    image: "images/mango.jpg", // Replace with your mango tree image path
     description:
       "A fast-growing tropical tree that produces delicious, juicy mangoes during summer. Its dense green foliage provides great shade.",
     category: "Fruit Trees",
@@ -11,7 +10,6 @@ const treesData = [
   {
     id: 2,
     name: "Guava Tree",
-    image: "images/guava.jpg",
     description:
       "Guava tree produces fragrant green fruit rich in Vitamin C. It is a hardy tree that adapts well to various climates.",
     category: "Fruit Trees",
@@ -20,7 +18,6 @@ const treesData = [
   {
     id: 3,
     name: "Neem Tree",
-    image: "images/neem.jpg",
     description:
       "Neem tree has medicinal properties and is used in traditional medicine. Grows well in tropical and semi-tropical regions.",
     category: "Medicinal Trees",
@@ -29,7 +26,6 @@ const treesData = [
   {
     id: 4,
     name: "Bamboo",
-    image: "images/bamboo.jpg",
     description:
       "Bamboo is a fast-growing grass plant that can be harvested sustainably. Used in construction and decoration.",
     category: "Bamboo",
@@ -38,7 +34,6 @@ const treesData = [
   {
     id: 5,
     name: "Rose Tree",
-    image: "images/rose.jpg",
     description:
       "Known for its beautiful blooms that brighten up any garden or landscape.",
     category: "Flowering Trees",
@@ -47,7 +42,6 @@ const treesData = [
   {
     id: 6,
     name: "Oak Tree",
-    image: "images/oak.jpg",
     description:
       "A classic shade tree providing a large canopy and excellent habitat for wildlife.",
     category: "Shade Trees",
@@ -158,8 +152,6 @@ function openModal(id) {
   const tree = treesData.find(t => t.id === id);
   if (!tree) return;
 
-  modalImage.src = tree.image;
-  modalImage.alt = tree.name;
   modalTitle.textContent = tree.name;
   modalDescription.textContent = tree.description;
   modalCategory.textContent = tree.category;
