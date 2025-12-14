@@ -1,90 +1,64 @@
-# 🚨 Emergency Services Web App – Assignment README
-
-This is a small frontend project I made using HTML, CSS, and Vanilla JavaScript. The goal was to build a basic emergency services web app and also answer some ES6-related questions to show my understanding.
-
-
-## 📘 My Understanding (In My Own Words)
-
-In this assignment, I tried to build a simple web app using only frontend tools—no frameworks. Along with that, I had to answer 5 questions based on ES6 topics. I’ve written the answers in a way that makes sense to me, and I’ve used examples where possible to make it clearer.
-
-I didn’t just copy from Google. I read, tried out the code, and then wrote what I understood. Hopefully, this shows that I’ve learned the concepts properly.
-
-
-## ❓ Answers to the Questions
-
-### 1. Difference between `var`, `let`, and `const`?
-
-- `var` is function-scoped and can be re-declared. It’s the old way and can cause bugs because of hoisting.
-- `let` is block-scoped and can be updated but not re-declared in the same block.
-- `const` is also block-scoped but cannot be updated or re-declared. It’s used for fixed values.
-
-I mostly use `let` and `const` now because they are safer and more predictable.
+### 1. Difference between `var`, `let`, and `const`
+- **var**
+  - Can be changed ✅
+  - Function scope (old system)
+  - Not recommended to use anymore
+- **let**
+  - Can be changed ✅
+  - Block scope (`{}`)
+  - Use when the value needs to be updated later
+- **const**
+  - Cannot be changed ❌
+  - Block scope (`{}`)
+  - Use most of the time when the value should stay fixed
 
 
-### 2. Difference between `map()`, `forEach()`, and `filter()`?
+### 2. Difference between `map()`, `forEach()`, and `filter()`
+All three work with Arrays, but their **return values** are different:
 
-| Method     | Returns New Array | What It Does                     |
-|------------|-------------------|----------------------------------|
-| `map()`    | Yes               | Changes each item and returns    |
-| `forEach()`| No                | Just loops, doesn’t return       |
-| `filter()` | Yes               | Keeps items that match a rule    |
-
-Example:  
-- Use `map()` to transform values  
-- Use `filter()` to remove unwanted ones  
-- Use `forEach()` when you just want to run something for each item
-
-
-### 3. What are arrow functions?
-
-Arrow functions are a shorter way to write functions. Example:
-
-```js
-const add = (a, b) => a + b;
-```
-
-They don’t have their own `this`, which is helpful in callbacks and inside array methods. Arrow functions also make the code cleaner and easier to read.
+- **forEach()**
+  - Task: Performs an action on each item (e.g., printing to console)
+  - Return: Nothing (`undefined`)
+- **map()**
+  - Task: Transforms each item
+  - Return: A new Array with the transformed items
+- **filter()**
+  - Task: Tests each item against a condition
+  - Return: A new Array with only the items that pass the condition
 
 
-### 4. How does destructuring work?
-
-Destructuring lets you pull out values from arrays or objects and assign them to variables directly. It makes your code shorter and easier to read.
-
-```js
-// Array example
-const [x, y] = [1, 2]; // x = 1, y = 2
-
-// Object example
-const person = { name: "Minhaz", age: 22 };
-const { name, age } = person; // name = "Minhaz", age = 22
-```
-
-Instead of writing `person.name`, you can just use `name`. It saves time and looks cleaner.
+### 3. ES6 Arrow Function
+- A shorter, simpler way to write functions in JavaScript.
+- Definition: Uses `=>` (arrow) instead of the `function` keyword.
+- Example:  
+  ```js
+  const add = (a, b) => a + b;
+  ```
+- Main advantage: Arrow functions do **not** create their own `this`; they inherit `this` from the surrounding scope.
 
 
-### 5. What are template literals?
+### 4. ES6 Destructuring Assignment
+- Destructuring means extracting values from Arrays or Objects into separate variables easily.
 
-Template literals are a better way to write strings in JavaScript. They use backticks (`` ` ``) and `${}` to insert variables inside the string.
+- **For Objects:** Use `{}` with property names.  
+  ```js
+  const { name, age } = user;
+  ```
 
-```js
-const name = "Minhaz";
-console.log(`Hello, ${name}!`);
-```
+- **For Arrays:** Use `[]` with positions.  
+  ```js
+  const [first, second] = list;
+  ```
 
-This is easier than using `+` to join strings:
 
-```js
-console.log("Hello, " + name + "!");
-```
-
-## 🧰 Tech Used
-
-- HTML
-- CSS (Vanilla / Tailwind / DaisyUI)
-- JavaScript (Vanilla only)
-
-## ✅ Status
-
-- [x] Project done  
-- [x] Questions answered  
-- [x] Uploaded to GitHub  
+### 5. ES6 Template Literals vs String Concatenation
+- **Template Literal:** Strings written with backticks (`` ` ``).
+- Features:
+  - Supports **interpolation**:  
+    ```js
+    `Hello ${name}!`
+    ```
+  - Supports **multi-line strings** easily.
+- **Difference from Concatenation:**
+  - Concatenation: `"Hello " + name + "!"` → messy, hard for line breaks.
+  - Template Literal: `` `Hello ${name}!` `` → cleaner, no `+` needed.
